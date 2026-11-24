@@ -13,7 +13,7 @@ function selectTool(tab, focus=false){
   document.querySelector('#tool-title').textContent=data.title;
   document.querySelector('#tool-copy').textContent=data.copy;
   document.querySelector('#tool-detail').textContent=data.detail;
-  const imagePath='assets/tools/'+tab.dataset.tool+'.webp?v=r15';
+  const imagePath='assets/tools/'+tab.dataset.tool+'.webp?v=r15b';
   const photo=document.querySelector('#tool-photo');photo.src=imagePath;photo.alt=data.alt;
   const photoButton=document.querySelector('.tool-photo-open');photoButton.dataset.image=imagePath;photoButton.dataset.caption=data.alt+'. Prototype geometry; physical testing required.';
   document.querySelectorAll('.skill-choice').forEach(item=>{const active=item.dataset.skill===tab.dataset.tool;item.classList.toggle('selected',active);item.setAttribute('aria-pressed',String(active));item.querySelector('.skill-state').textContent=active?'Active in preview':'Standby in preview';});

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7faf7">
+  <meta name="description" content="Meet Spacefruit: a modular garden robot in development, designed to help people plant, tend and harvest. Explore the vision and follow the Kickstarter journey.">
+  <meta property="og:title" content="Spacefruit — Grow everywhere.">
+  <meta property="og:description" content="A little help. A lot more growing. Meet the garden robotics project built around people.">
+  <meta property="og:image" content="https://kingqueue.github.io/spacefruit_website/assets/spacefruit-garden.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kingqueue.github.io/spacefruit_website/">
+  <title>Spacefruit — Grow everywhere.</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header">
+    <a class="brand" href="#" aria-label="Spacefruit home"><img src="assets/mark.svg" width="34" height="34" alt=""><span>spacefruit<span class="brand-period">.</span></span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span aria-hidden="true">☰</span></button>
+    <nav id="navigation" aria-label="Main navigation">
+      <a href="#vision">The vision</a><a href="#tools">The tools</a><a href="#about">Our story</a>
+      <a class="button small campaign-link" href="#campaign">Meet us on Kickstarter</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tiny-leaf" aria-hidden="true">✳</span> Small robots. Shared gardens.</p>
+        <h1>A little help.<br>A lot more <em>growing.</em></h1>
+        <p class="hero-description">Meet Spacefruit. A garden robotics project for people who believe growing something should be within everyone’s reach.</p>
+        <div class="hero-actions"><a class="button campaign-link" href="#campaign">Explore the Kickstarter</a><a class="text-link" href="#tools">Discover the tools <span aria-hidden="true">＋</span></a></div>
+        <p class="quiet hero-note">In development. Built with care, one prototype at a time.</p>
+      </div>
+      <figure class="hero-visual">
+        <img src="assets/spacefruit-garden.webp" alt="Spacefruit design vision showing small garden robots planting, harvesting and tending a lush garden" width="1672" height="941" fetchpriority="high">
+        <figcaption><span class="image-caption-tag">The Spacefruit vision</span><span>Concept rendering</span></figcaption>
+        <div class="visual-label" aria-hidden="true"><span>Made for the garden.</span><strong>Designed around you.</strong></div>
+      </figure>
+    </section>
+    <div class="principles" aria-label="Design principles"><span>Human-centered by design</span><span class="principle-star" aria-hidden="true">✳</span><span>One robot. Different tools.</span><span class="principle-star" aria-hidden="true">✳</span><span>A future worth growing</span></div>
+    <section class="vision section-wrap" id="vision">
+      <div class="section-intro"><p class="eyebrow">Technology, with its feet on the ground</p><h2>More time for the<br>part you <em>love.</em></h2></div>
+      <div class="vision-text"><p>Hands in the soil. Something fresh on the table. A patch of green that feels like yours.</p><p>Spacefruit explores how a small, adaptable robot could help with the repetitive work of growing, while keeping people at the heart of the garden.</p><p class="quiet">Our goal is practical help with planting, tending and harvesting. We’re developing the mechanics, vision and controls to get there.</p></div>
+      <figure class="garden-image"><img src="assets/garden-overhead.webp" alt="Overhead concept of Spacefruit robots helping across a shared garden with raised vegetable beds" width="1672" height="941" loading="lazy"><figcaption>Our long-term vision: one garden, many helping hands. Concept rendering; coordinated garden operation is a development goal.</figcaption></figure>
+    </section>
+    <section class="tools-section" id="tools"><div class="section-wrap">
+      <div class="tools-heading"><div><p class="eyebrow">A different tool for a different day</p><h2>Small arm.<br><em>Big possibilities.</em></h2></div><p>Just like you reach for a trowel or a pair of snips, Spacefruit is being designed around interchangeable tools. One task at a time, with the right attachment.</p></div>
+      <div class="tool-workbench">
+        <div class="tool-tabs" role="tablist" aria-label="Explore tool concepts" aria-orientation="vertical">
+          <button id="tab-gripper" class="tool-tab active" role="tab" aria-selected="true" aria-controls="tool-panel" data-tool="gripper"><span class="tool-symbol" aria-hidden="true">⌘</span><span>Grip &amp; snip<small>Pick. Hold. Trim.</small></span><span class="tab-plus" aria-hidden="true">＋</span></button>
+          <button id="tab-seedling" class="tool-tab" role="tab" aria-selected="false" aria-controls="tool-panel" tabindex="-1" data-tool="seedling"><span class="tool-symbol" aria-hidden="true">♧</span><span>Seedling<small>A small start.</small></span><span class="tab-plus" aria-hidden="true">＋</span></button>
+          <button id="tab-scooper" class="tool-tab" role="tab" aria-selected="false" aria-controls="tool-panel" tabindex="-1" data-tool="scooper"><span class="tool-symbol" aria-hidden="true">⌑</span><span>Scooper<small>Gather. Rotate. Place.</small></span><span class="tab-plus" aria-hidden="true">＋</span></button>
+          <button id="tab-bully" class="tool-tab" role="tab" aria-selected="false" aria-controls="tool-panel" tabindex="-1" data-tool="bully"><span class="tool-symbol" aria-hidden="true">⊓</span><span>Bully<small>A gentle little push.</small></span><span class="tab-plus" aria-hidden="true">＋</span></button>
+          <button id="tab-nursery" class="tool-tab" role="tab" aria-selected="false" aria-controls="tool-panel" tabindex="-1" data-tool="nursery"><span class="tool-symbol" aria-hidden="true">❧</span><span>Nursery<small>Help new growth take root.</small></span><span class="tab-plus" aria-hidden="true">＋</span></button>
+          <button id="tab-weeder" class="tool-tab" role="tab" aria-selected="false" aria-controls="tool-panel" tabindex="-1" data-tool="weeder"><span class="tool-symbol" aria-hidden="true">⋔</span><span>Weeder<small>Catch. Pull. Clear.</small></span><span class="tab-plus" aria-hidden="true">＋</span></button>
+        </div>
+        <div class="tool-panel" id="tool-panel" role="tabpanel" aria-labelledby="tab-gripper" tabindex="0">
+          <div class="tool-art" aria-hidden="true"><svg viewBox="0 0 440 300"><defs><linearGradient id="arm-shade" x2="0" y2="1"><stop stop-color="#fcfffb"/><stop offset="1" stop-color="#d7e7dc"/></linearGradient></defs><ellipse cx="230" cy="257" rx="142" ry="15" fill="#bdd6c5" opacity=".35"/><path d="M85 246v-36h84l54-88 54 29-52 89H85" fill="url(#arm-shade)" stroke="#3d6653" stroke-width="3"/><circle cx="240" cy="140" r="22" fill="#ecf4eb" stroke="#3d6653" stroke-width="3"/><circle cx="240" cy="140" r="9" fill="#91b49b"/><path d="M250 120l59-43 21 27-67 50" fill="url(#arm-shade)" stroke="#3d6653" stroke-width="3"/><g id="tool-svg-detail"><path d="M310 79l47-9 21 30-20 18-15-22-22 7M324 104l21 37 26 4 6-18-22-2-9-29" fill="#a9cbb1" stroke="#315943" stroke-width="3" stroke-linejoin="round"/><path d="M345 125l38 22m-31-30 38 6" stroke="#315943" stroke-width="3"/></g><circle cx="116" cy="223" r="9" fill="#91b49b"/><path d="M54 260h298" stroke="#b5cebc" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <div class="tool-description"><p class="eyebrow" id="tool-kicker">Detachable tool concept</p><h3 id="tool-title">A careful grip.<br>A clean little snip.</h3><p id="tool-copy">Opposing fingers and an underside scissor mechanism bring holding and trimming together in one detachable tool.</p><p class="tool-detail" id="tool-detail">Spring-return mechanisms • camera stays on the arm</p></div>
+        </div>
+      </div>
+      <div class="prototype-note"><span aria-hidden="true">✳</span><p>Real parts before big promises. These tools are CAD prototypes; fit, force and task performance still need physical testing.</p><button class="text-link gallery-open" data-image="assets/tool-concepts.png" data-caption="Original detachable-tool CAD concept overview supplied for the campaign. Prototype geometry, not production hardware.">See the CAD concepts <span aria-hidden="true">＋</span></button></div>
+    </div></section>
+    <section class="about section-wrap" id="about"><div class="about-heading"><p class="eyebrow">The person behind the project</p><h2>It started with<br>a simple <em>question.</em></h2><div class="maker-signature"><span class="maker-monogram" aria-hidden="true">s.</span><div><strong id="founder-name">The maker behind Spacefruit</strong><span id="founder-role">Building a little help for the garden.</span></div></div></div><div class="about-story"><p class="story-lead" id="story-intro">What if more people could grow something of their own, with a little help from a robot?</p><div id="story-body"><p>That’s the idea I’m exploring with Spacefruit. I’m building a modular garden robot, starting with the details that make useful work possible: an arm, a camera and tools that can change with the task.</p><p>This is a project in progress. I want to share the real process, from CAD and 3D-printed parts to assembly, testing and the changes that come next.</p><p>The ambition is simple: technology that makes room for people, plants and a little more possibility.</p></div><a class="text-link" href="https://github.com/kingQueue/spacefruit_robot" target="_blank" rel="noopener noreferrer">Follow the open build <span aria-hidden="true">＋</span></a></div></section>
+    <section class="journey section-wrap"><div class="journey-heading"><p class="eyebrow">The idea is growing</p><h2>Come along for<br><em>the build.</em></h2><p>Explore the vision, the current tool concepts and an early look at the campaign.</p></div><div class="gallery-grid">
+      <button class="gallery-card gallery-open" data-image="assets/spacefruit-garden.png" data-caption="The Spacefruit garden vision. Concept rendering."><img src="assets/spacefruit-garden.webp" alt="Garden robot design vision" width="1672" height="941" loading="lazy"><span>The garden vision <span aria-hidden="true">＋</span></span><small>Concept rendering</small></button>
+      <button class="gallery-card gallery-open" data-image="assets/tool-concepts.png" data-caption="Detachable tool CAD concepts. Physical fit and load testing required."><img src="assets/tool-concepts.webp" alt="FreeCAD overview of the modular arm and detachable tool concepts" width="2100" height="1600" loading="lazy"><span>Inside the mechanisms <span aria-hidden="true">＋</span></span><small>CAD prototypes</small></button>
+      <button class="gallery-card gallery-open" data-image="assets/campaign-preview.png" data-caption="Early Kickstarter draft screenshot supplied by the creator. Displayed figures are historical draft placeholders, not live funding data."><img src="assets/campaign-preview.webp" alt="Early Spacefruit Kickstarter page draft" width="1886" height="750" loading="lazy"><span>A first look at the campaign <span aria-hidden="true">＋</span></span><small>Early draft · not live funding data</small></button>
+    </div></section>
+    <section class="campaign section-wrap" id="campaign"><div class="campaign-inner"><div class="campaign-flower" aria-hidden="true">✳</div><p class="eyebrow">Help grow what comes next</p><h2>A greener future<br>starts <em>somewhere.</em></h2><p>Be part of Spacefruit’s next chapter. Explore the project, follow its progress and help bring this garden robotics vision closer to the soil.</p><a class="button light campaign-link" id="campaign-main" href="https://linktr.ee/lutherwardle" target="_blank" rel="noopener noreferrer">Follow the Spacefruit journey</a><p class="campaign-status" id="campaign-status">The direct Kickstarter link will be added when available. Follow the creator for project updates.</p></div></section>
+    <section class="faq section-wrap"><div><p class="eyebrow">A few good questions</p><h2>Before we <em>grow.</em></h2></div><div class="faq-items"><details><summary>Can I buy a Spacefruit robot today?</summary><p>Spacefruit is in development. The images show a design vision and CAD prototypes, not a shipping product. Campaign details, availability and any delivery commitments belong on the official Kickstarter page.</p></details><details><summary>How do the tools change?</summary><p>The current CAD concept uses a shared slide-in dovetail, a snap latch and a secondary retaining screw. Cables are disconnected manually. Automatic tool recognition and its app workflows are planned work.</p></details><details><summary>Will it work alongside people?</summary><p>That is the design goal: useful help in a garden that still belongs to people. Human interaction, sensing, motion limits and real-world behavior need careful testing as the prototype develops.</p></details><details><summary>How can I follow or support the project?</summary><p>Use the campaign link on this page when available, or follow the creator’s <a href="https://linktr.ee/lutherwardle" target="_blank" rel="noopener noreferrer">project links</a>. The build repository is also available for a closer look at the work.</p></details></div></section>
+  </main>
+  <footer class="footer section-wrap"><a class="brand" href="#"><img src="assets/mark.svg" width="30" height="30" alt=""><span>spacefruit.</span></a><p>A little help for a world worth growing.</p><div><a href="#about">Our story</a><a href="https://linktr.ee/lutherwardle" target="_blank" rel="noopener noreferrer">Follow along</a><a href="https://github.com/kingQueue/spacefruit_robot" target="_blank" rel="noopener noreferrer">The build</a></div><small>© <span id="year">2026</span> Spacefruit. Growing, together.</small></footer>
+  <dialog id="image-dialog" aria-label="Project image viewer"><button class="dialog-close" aria-label="Close image viewer">Close <span aria-hidden="true">×</span></button><img id="dialog-image" alt=""><p id="dialog-caption"></p></dialog>
+</body>
+</html>

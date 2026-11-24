@@ -1,6 +1,6 @@
 # Spacefruit website
 
-A static, responsive website for Spacefruit, hosted on GitHub Pages. No paid hosting, build service, database or API key is required. The site uses the four creator-supplied Kickstarter images, with optimized WebP copies and full PNG originals for the image viewer.
+A static, responsive website for Spacefruit, hosted on GitHub Pages. No paid hosting, build service, database or API key is required. The site uses the four creator-supplied Kickstarter images, with optimized WebP copies and full PNG originals for the image viewer. The features and model architecture sections also use actual FreeCAD screenshots of the six detachable tool concepts and the shared receiver.
 
 ## Edit your story and Kickstarter link
 
@@ -33,4 +33,4 @@ Run `python -m http.server 8876 --bind 127.0.0.1` from this folder, then open ht
 - `site-content.json`: creator-editable About text and campaign destination.
 - `assets/`: all four supplied images, WebP delivery versions and site mark.
 
-Illustrative robot imagery is labeled as concept rendering. CAD images are labeled as prototypes. The supplied Kickstarter screenshot is an early draft, not a live funding counter. The site does not claim production readiness, certification, patent status, tested autonomous performance, shipping dates or unverified funding figures. Tool illustrations are schematic drawings, not mechanical CAD.
+Illustrative robot imagery is labeled as concept rendering. CAD images are labeled as prototypes. The supplied Kickstarter screenshot is an early draft, not a live funding counter. The site does not claim production readiness, certification, patent status, tested autonomous performance, shipping dates or unverified funding figures. Tool illustrations are actual FreeCAD screenshots. The small model squares are diagram labels, not representations of trained model artifacts. The architecture graphic previews a planned shared custom core for general task understanding and movement planning, with one attachment-specific custom model active at a time. Clicking a model square also updates the tool screenshot and description above. This is a website demonstration; it does not activate robot software or establish that automatic tool recognition, trained custom models or autonomous tasks are complete.

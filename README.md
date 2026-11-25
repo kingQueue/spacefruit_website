@@ -36,3 +36,29 @@ Run `python -m http.server 8876 --bind 127.0.0.1` from this folder, then open ht
 Illustrative garden imagery presents the project vision. CAD images are labeled as prototypes. The supplied Kickstarter screenshot is an early draft, not a live funding counter. The hero uses the creator’s supplied autonomous-product positioning. The prototype notes and FAQ describe current development status; no tested autonomy, certification, shipping dates or funding figures are established by the page. Tool illustrations are actual FreeCAD screenshots. The small model squares are diagram labels, not representations of trained model artifacts. The architecture graphic previews a planned shared custom core for general task understanding and movement planning, with one attachment-specific custom model active at a time. Clicking a model square also updates the tool screenshot and description above. This is a website demonstration; it does not activate robot software or establish that automatic tool recognition, trained custom models or autonomous tasks are complete.
 
 Latest CAD images: R13 threaded tool interfaces and all six attachments; R15 fixed front-bearing-cap camera assembly. KingQueue profile link is available in navigation and footer.
+
+
+## Interactive floating garden
+
+The full-arm screenshot has been replaced with an original Blender garden diorama.
+Drag to orbit through 360 degrees; scroll/pinch to zoom. Reset view restores the
+starting camera, and Fullscreen expands the viewer where supported. The viewer
+loads when it approaches the viewport. No autoplay rotation or analytics are used.
+
+- `assets/models/spacefruit-floating-garden.glb`: self-contained browser scene.
+- `assets/models/spacefruit-garden-poster.webp`: rendered loading/fallback image.
+- `scene-viewer.js`: lazy loading, reset and fullscreen controls.
+- `assets/vendor/model-viewer.min.js`: self-hosted Google model-viewer 4.4.0,
+  Apache-2.0; license included alongside the bundle.
+
+The stylized robot is a visual concept, separate from the mechanical FreeCAD
+assemblies. The garden, robot, shed, plants and floating geology are original
+procedural geometry created for this project. The attached garden image informed
+colors and atmosphere; its pixels are not used as 3D model textures. The missing
+Blender style reference was unavailable during this first scene build.
+
+The editable Blender file is `source/Spacefruit_Floating_Garden.blend`. To regenerate,
+run Blender with `--background --python source/build_spacefruit_garden.py` from the
+repository root. The script saves the editable scene and PNG in `source/`, then
+exports the material-batched GLB to `assets/models/`. Convert the rendered PNG to
+WebP for `spacefruit-garden-poster.webp` after making visual changes.

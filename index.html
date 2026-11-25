@@ -12,8 +12,9 @@
   <meta property="og:url" content="https://kingqueue.github.io/spacefruit_website/">
   <title>Spacefruit — Grow everywhere.</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261124-mobile-menu">
+  <link rel="stylesheet" href="styles.css?v=20261125-garden">
   <script src="app.js?v=20261124-mobile-menu" defer></script>
+  <script type="module" src="scene-viewer.js?v=20261125-garden"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -50,7 +51,15 @@
         <article class="feature-card"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 39V9m14 30V9m14 30V9M7 33h6m8-14h6m8 8h6"/><circle cx="24" cy="31" r="4"/></svg><h3>Find a path. Remember a plot.</h3><p>A wide-angle camera, wheel encoders and forward-facing distance sensors form the planned navigation system for moving between rows and locating plant plots.</p><p class="feature-how"><strong>How it works</strong> Wheel motion estimates travel, distance sensors check the path ahead, and camera observations add scene context. Plot accuracy depends on calibration and garden conditions.</p></article>
         <article class="feature-card"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M15 29V10a4 4 0 0 1 8 0v19a9 9 0 1 1-8 0Z"/><path d="M19 17v17m13-15c0 5 10 5 10 0 0-3-5-9-5-9s-5 6-5 9Z"/></svg><h3>A little more garden context.</h3><p>Temperature and humidity readings add local environmental context alongside the camera and motion sensors.</p><p class="feature-how"><strong>How it works</strong> The onboard environmental sensor samples the air around the robot. These readings describe local conditions; they don’t measure soil moisture.</p></article>
       </div>
-      <figure class="camera-update"><button class="gallery-open" data-image="assets/tools/arm-r15.webp?v=r15b" data-caption="R15 FreeCAD assembly: raised camera mount on the fixed front wrist bearing cap. The wrist spindle and attached tool rotate independently." aria-label="Enlarge the latest arm and camera design"><img src="assets/tools/arm-r15.webp?v=r15b" alt="Latest FreeCAD arm assembly with its camera raised above the fixed front wrist bearing cap, aimed down toward the gripper and scissors" width="1600" height="1100" loading="lazy"></button></figure>
+      <section class="garden-scene" id="garden-scene" aria-labelledby="garden-scene-heading">
+        <div class="scene-toolbar"><h3 id="garden-scene-heading">Step into the garden.</h3><div class="scene-actions"><button id="scene-reset" type="button">Reset view</button><button id="scene-fullscreen" type="button">Fullscreen</button></div></div>
+        <div class="scene-stage">
+          <p class="scene-help" id="scene-help">Drag to rotate 360° · scroll or pinch to zoom</p>
+          <model-viewer id="spacefruit-garden" src="assets/models/spacefruit-floating-garden.glb" poster="assets/models/spacefruit-garden-poster.webp" alt="An interactive floating garden island with a cloud-white and sage Spacefruit robot, raised vegetable beds, a garden shed, fruit tree and pergola. Rotate to explore it from every side." aria-describedby="scene-help" camera-controls touch-action="pan-y" camera-orbit="35deg 65deg 115%" camera-target="0m 0.6m 0m" field-of-view="32deg" min-camera-orbit="auto 8deg 65%" max-camera-orbit="auto 110deg 220%" shadow-intensity="0.8" shadow-softness="1" exposure="1.1" interaction-prompt="none" loading="lazy" reveal="auto"></model-viewer>
+          <p class="scene-status" id="scene-status" role="status">Loading the 3D garden…</p>
+        </div>
+        <noscript><img src="assets/models/spacefruit-garden-poster.webp" alt="Rendered Spacefruit robot in a floating garden island" width="1400" height="1100"></noscript>
+      </section>
     </section>
     <section class="tools-section" id="tools"><div class="section-wrap">
       <div class="tools-heading"><div><p class="eyebrow">A different tool for a different day</p><h2>Small arm,<br><em>unlimited possibilities.</em></h2></div></div>

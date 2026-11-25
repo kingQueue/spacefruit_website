@@ -120,3 +120,19 @@ main{min-width:0}
  .context-inputs{gap:10px;flex-wrap:wrap}
  .skill-choices{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+
+/* Interactive Blender garden, replacing the full-arm photograph. */
+.garden-scene{margin-top:44px;overflow:hidden;border:1px solid var(--line);border-radius:24px;background:#eff5ec}
+.scene-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px 26px;background:#f7faf7;border-bottom:1px solid var(--line)}
+.scene-toolbar h3{font-size:1.6rem;letter-spacing:-.04em}
+.scene-actions{display:flex;gap:8px;flex-shrink:0}
+.scene-actions button{min-height:44px;border:1px solid #c9d8c7;background:white;padding:10px 15px;border-radius:99px;font-size:.9rem}
+.scene-actions button:hover{background:var(--mint)}
+.scene-stage{position:relative;height:clamp(450px,50vw,700px);background:radial-gradient(ellipse at 50% 35%,#fafcf7,#e5efdf);isolation:isolate}
+.scene-stage model-viewer{display:block;width:100%;height:100%;--poster-color:transparent;--progress-bar-color:#477650;--progress-bar-height:3px}
+.scene-help{position:absolute;z-index:2;left:20px;right:20px;top:15px;text-align:center;pointer-events:none;font-size:1rem;line-height:1.5;color:#3d6047}
+.scene-status{position:absolute;z-index:2;bottom:20px;left:20px;right:20px;text-align:center;pointer-events:none;font-size:1rem;color:#3d6047}
+.scene-status[hidden]{display:none}
+.garden-scene:fullscreen{border:0;border-radius:0;display:flex;flex-direction:column;background:var(--cloud)}
+.garden-scene:fullscreen .scene-stage{flex:1;height:auto;min-height:0}
+@media(max-width:600px){.scene-toolbar{padding:18px;flex-wrap:wrap}.scene-toolbar h3{font-size:1.4rem}.scene-actions button{font-size:.85rem;padding-inline:13px}.scene-stage{height:500px}.scene-help{font-size:1rem;left:16px;right:16px;top:14px}.garden-scene{border-radius:20px}}

@@ -94,19 +94,19 @@ main{min-width:0}
 .skip-link{z-index:30}
 .camera-update{padding-bottom:24px}
 @media(max-width:900px){
- :root{--sidebar-width:64px}
- .header{padding:22px 12px;gap:24px;overflow-x:hidden}
- .header .brand{justify-content:center}
+ :root{--sidebar-width:0px;scroll-padding-top:84px}
+ .header{inset:16px auto auto 16px;width:44px;height:44px;padding:0;gap:0;background:transparent;border:0;overflow:visible}
+ .header .brand{display:none}
  .header .brand>span{display:none}
- .header .menu-toggle{display:flex;align-items:center;justify-content:center;width:40px;min-height:42px;padding:8px;border:1px solid var(--line);border-radius:12px;background:white;font-size:1.2rem;align-self:center}
+ .header .menu-toggle{display:flex;align-items:center;justify-content:center;width:44px;min-height:44px;padding:8px;border:1px solid var(--line);border-radius:12px;background:white;font-size:1.2rem;align-self:center}
  .header #navigation{display:none}
- .header:has(#navigation.open){width:248px;padding-inline:20px;box-shadow:14px 0 35px #163f311a}
+ .header:has(#navigation.open){inset:0 auto 0 0;width:248px;height:100dvh;padding:22px 20px;gap:24px;background:var(--cloud);border-right:1px solid var(--line);overflow-y:auto;box-shadow:14px 0 35px #163f311a}
  .header:has(#navigation.open) .brand>span{display:inline}
- .header:has(#navigation.open) .brand{justify-content:flex-start}
+ .header:has(#navigation.open) .brand{display:flex;justify-content:flex-start}
  .header:has(#navigation.open) .menu-toggle{align-self:flex-start}
  .header #navigation.open{display:flex}
  .section-wrap{padding-inline:24px}
- .hero{padding-top:42px}
+ .hero{padding-top:96px}
  .hero h1{font-size:clamp(2.25rem,6vw,4rem)}
  .footer{padding-inline:24px}
 }

@@ -42,7 +42,6 @@ const dialog=document.querySelector('#image-dialog');
 document.querySelectorAll('.gallery-open').forEach(button=>button.addEventListener('click',()=>{
   document.querySelector('#dialog-image').src=button.dataset.image;
   document.querySelector('#dialog-image').alt=button.dataset.caption;
-  document.querySelector('#dialog-caption').textContent=button.dataset.caption;
   dialog.showModal();
 }));
 document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
@@ -58,14 +57,13 @@ async function loadContent(){
       document.querySelector('#story-body').replaceChildren(...content.storyParagraphs.map(text=>{const p=document.createElement('p');p.textContent=text;return p;}));
     }
     const campaign=safeHttps(content.kickstarterUrl);
-    if(campaign&&new URL(campaign).hostname.match(/(^|\.)kickstarter\.com$/)){
-      document.querySelectorAll('.campaign-link').forEach(link=>{link.href=campaign;link.target='_blank';link.rel='noopener noreferrer';});
-      document.querySelector('#campaign-main').textContent=content.kickstarterButtonText||'Explore Spacefruit on Kickstarter';
-      document.querySelector('#campaign-status').textContent='Get the latest campaign details directly on Kickstarter.';
-    }else{
-      document.querySelectorAll('.campaign-link:not(#campaign-main)').forEach(link=>link.textContent='Follow the Kickstarter journey');
-      const creator=safeHttps(content.creatorLinksUrl);if(creator)document.querySelector('#campaign-main').href=creator;
-    }
+    const isKickstarter=campaign&&new URL(campaign).hostname.match(/(^|\.)kickstarter\.com$/);
+    const destination=isKickstarter?campaign:safeHttps(content.creatorLinksUrl);
+    document.querySelectorAll('.campaign-link').forEach(link=>{
+      if(destination)link.href=destination;
+      link.target='_blank';link.rel='noopener noreferrer';
+      link.textContent=isKickstarter?(content.kickstarterButtonText||'Explore Spacefruit on Kickstarter'):'Follow Spacefruit';
+    });
   }catch(error){console.warn('Using the built-in site copy:',error.message);}
 }
 loadContent();
